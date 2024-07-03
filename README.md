@@ -151,5 +151,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@MridulS](https://github.com/MridulS/)
 * [@Schefflera-Arboricola](https://github.com/Schefflera-Arboricola/)
 
