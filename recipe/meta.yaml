@@ -1,5 +1,5 @@
 {% set name = "nx-parallel" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nx_parallel-{{ version }}.tar.gz
-  sha256: c1098436b440815cb4246e5592db9cc60dc9c912ead22289a0586afff0c39db7
+  sha256: f3b98323f9e160a15698d6471eee59eb90a0356b2da8a9ddd80818445afc0d04
 
 build:
   noarch: python
