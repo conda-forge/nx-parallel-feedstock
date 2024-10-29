@@ -1,5 +1,5 @@
 {% set name = "nx-parallel" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nx_parallel-{{ version }}.tar.gz
-  sha256: c1098436b440815cb4246e5592db9cc60dc9c912ead22289a0586afff0c39db7
+  sha256: f3b98323f9e160a15698d6471eee59eb90a0356b2da8a9ddd80818445afc0d04
 
 build:
   noarch: python
@@ -16,13 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.10
-    - hatchling
+    - python >=3.11
     - pip
+    - setuptools >=61.2
   run:
-    - python >=3.10
-    - networkx
-    - joblib
+    - python >=3.11
+    - networkx >=3.4.2
+    - joblib >=1.4.2
+  run_constrained:
+    - numpy >=1.23
+    - scipy >=1.9,!=1.11.0,!=1.11.1
 
 test:
   imports:
@@ -39,8 +42,7 @@ about:
   license_file: LICENSE.md
   summary: "A parallel backend for NetworkX"
   description: |
-    A parallel backend for NetworkX. It uses joblib to run NetworkX algorithms
-    on multiple CPU cores.
+    A NetworkX backend that uses joblib to run graph algorithms in parallel.
   doc_url: https://github.com/networkx/nx-parallel
   dev_url: https://github.com/networkx/nx-parallel
 
