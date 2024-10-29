@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
-    - hatchling
+    - python >=3.11
     - pip
+    - setuptools >=61.2
   run:
-    - python >=3.10
-    - networkx
-    - joblib
+    - python >=3.11
+    - networkx >=3.4.2
+    - joblib >=1.4.2
 
 test:
   imports:
@@ -31,6 +31,15 @@ test:
     - pip check
   requires:
     - pip
+  optional-dependencies:
+    developer:
+      - pre-commit ==3.8.0
+      - ruff ==0.6.7
+    test:
+      - pytest >=7.2
+      - pytest-order >=1.3.0
+      - numpy >=1.23
+      - scipy >=1.9,!=1.11.0,!=1.11.1
 
 about:
   home: https://github.com/networkx/nx-parallel
@@ -39,8 +48,7 @@ about:
   license_file: LICENSE.md
   summary: "A parallel backend for NetworkX"
   description: |
-    A parallel backend for NetworkX. It uses joblib to run NetworkX algorithms
-    on multiple CPU cores.
+    A NetworkX backend that uses joblib to run graph algorithms in parallel.
   doc_url: https://github.com/networkx/nx-parallel
   dev_url: https://github.com/networkx/nx-parallel
 
