@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nx_parallel-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nx_parallel-{{ version }}.tar.gz
   sha256: f3b98323f9e160a15698d6471eee59eb90a0356b2da8a9ddd80818445afc0d04
 
 build:
