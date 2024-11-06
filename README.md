@@ -13,8 +13,7 @@ Development: https://github.com/networkx/nx-parallel
 
 Documentation: https://github.com/networkx/nx-parallel
 
-A parallel backend for NetworkX. It uses joblib to run NetworkX algorithms
-on multiple CPU cores.
+A NetworkX backend that uses joblib to run graph algorithms in parallel.
 
 
 Current build status
