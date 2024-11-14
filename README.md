@@ -15,7 +15,6 @@ Documentation: https://github.com/networkx/nx-parallel
 
 A NetworkX backend that uses joblib to run graph algorithms in parallel.
 
-
 Current build status
 ====================
 
