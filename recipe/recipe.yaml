@@ -12,13 +12,13 @@ source:
   sha256: f3b98323f9e160a15698d6471eee59eb90a0356b2da8a9ddd80818445afc0d04
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools >=61.2
   run:
@@ -43,6 +43,7 @@ tests:
         - nx_parallel.utils
   - requirements:
       run:
+        - python ${{ python_min }}.*
         - pip
     script:
       - pip check
