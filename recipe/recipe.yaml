@@ -1,6 +1,6 @@
 context:
   name: nx-parallel
-  version: 0.3
+  version: "0.4"
   python_min: "3.11"
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/nx_parallel-${{ version }}.tar.gz
-  sha256: f3b98323f9e160a15698d6471eee59eb90a0356b2da8a9ddd80818445afc0d04
+  sha256: 35d4d9d0d3c412ed9062cf45d555f707e801d73c7459a32d404c4566488eaee0
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
